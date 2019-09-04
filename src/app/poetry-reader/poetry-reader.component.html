@@ -1,1 +1,7 @@
-<p>poetry-reader works!</p>
+<div *ngIf="poem">
+  <h2>{{poem.title}}</h2>
+
+  <div *ngFor="let line of poem.lines">
+    <span>{{line.text}}</span>
+  </div>
+</div>
