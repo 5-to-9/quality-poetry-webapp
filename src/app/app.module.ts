@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PoetryReaderComponent } from './poetry-reader/poetry-reader.component';
@@ -12,7 +13,8 @@ import { PoetryFormComponent } from './poetry-form/poetry-form.component';
     PoetryFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
