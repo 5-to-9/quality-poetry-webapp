@@ -8,7 +8,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getPoem() {
-    return this.httpClient.get(`http://api.qualitypoetry.com/create?author=default&mood=basic`);
+  public getPoem(author, mood) {
+    return this.httpClient.get(`http://api.qualitypoetry.com/create?author=`+author+`&mood=`+mood);
   }
 }

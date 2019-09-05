@@ -8,15 +8,19 @@
   </div>
 </div>
 
-<form [formGroup]="poemForm" (ngSubmit)="getFullPoem()">
+<select (change)="selectMood($event)">
+  <option value="basic">Basic</option>
+  <option value="love">Romantic</option>
+  <option value="angst">Angsty</option>
+</select>
 
-  <select>
-    <option *ngFor="let author of authors">{{author}}</option>
-  </select>
+<select (change)="selectAuthor($event)">
+  <option value="default">Default</option>
+  <option value="tumblrPoet">Tumblr Poet</option>
+  <option value="rupiKaur">Rupi Kaur</option>
+</select>
 
-  <select formControlName="moodName">
-    <option *ngFor="let mood of moods">{{mood}}</option>
-  </select>
+<p><span>Mood: </span><b>{{selectedMood}}</b></p>
+<p><span>Author: </span><b>{{selectedAuthor}}</b></p>
 
-  <button>Get a new one</button>
-</form>
+<button (click)="getFullPoem()">Get a new one</button>
