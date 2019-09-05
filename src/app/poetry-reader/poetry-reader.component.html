@@ -1,4 +1,4 @@
-<div *ngIf="poem" class="container">
+<div *ngIf="poem" class="reader-poem">
   <div class="row">
     <h2>{{poem.title}}</h2>
 
@@ -8,19 +8,24 @@
   </div>
 </div>
 
-<select (change)="selectMood($event)">
-  <option value="basic">Basic</option>
-  <option value="love">Romantic</option>
-  <option value="angst">Angsty</option>
+<span class="reader-label">author: </span>
+
+<select (change)="selectAuthor($event)" class="reader-dropdown">
+  <option value="default">default</option>
+  <option value="tumblrPoet">tumblr poet</option>
+  <option value="rupiKaur">rupi kaur</option>
 </select>
 
-<select (change)="selectAuthor($event)">
-  <option value="default">Default</option>
-  <option value="tumblrPoet">Tumblr Poet</option>
-  <option value="rupiKaur">Rupi Kaur</option>
+<br/>
+
+<span class="reader-label">mood: </span>
+
+<select (change)="selectMood($event)" class="reader-dropdown">
+  <option value="basic">basic</option>
+  <option value="love">romantic</option>
+  <option value="angst">angsty</option>
 </select>
 
-<p><span>Mood: </span><b>{{selectedMood}}</b></p>
-<p><span>Author: </span><b>{{selectedAuthor}}</b></p>
+<br/>
 
-<button (click)="getFullPoem()">Get a new one</button>
+<button (click)="getFullPoem()" class="reader-button">another</button>

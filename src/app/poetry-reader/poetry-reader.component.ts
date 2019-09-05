@@ -20,7 +20,7 @@ export class PoetryReaderComponent implements OnInit {
 
   ngOnInit() {
     this.selectedMood = 'basic'
-    this.selectedAuthor = 'rupiKaur'
+    this.selectedAuthor = 'default'
     this.getFullPoem()
   }
 
@@ -36,6 +36,5 @@ export class PoetryReaderComponent implements OnInit {
 
   selectAuthor (event: any) {
     this.selectedAuthor = event.target.value;
-
   }
 }
