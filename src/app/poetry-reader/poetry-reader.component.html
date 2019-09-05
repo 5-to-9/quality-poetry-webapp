@@ -1,7 +1,22 @@
-<div *ngIf="poem">
-  <h2>{{poem.title}}</h2>
+<div *ngIf="poem" class="container">
+  <div class="row">
+    <h2>{{poem.title}}</h2>
 
-  <div *ngFor="let line of poem.lines">
-    <span>{{line.text}}</span>
+    <div *ngFor="let line of poem.lines">
+      <span>{{line.text}}</span>
+    </div>
   </div>
 </div>
+
+<form [formGroup]="poemForm" (ngSubmit)="getFullPoem()">
+
+  <select>
+    <option *ngFor="let author of authors">{{author}}</option>
+  </select>
+
+  <select formControlName="moodName">
+    <option *ngFor="let mood of moods">{{mood}}</option>
+  </select>
+
+  <button>Get a new one</button>
+</form>

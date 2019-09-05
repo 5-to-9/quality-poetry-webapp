@@ -1,5 +1,9 @@
 # Quality Poetry Webapp
 
+Take a look at some quality poetry.
+
+To install, clone the repo, run `npm install` and then `ng serve`.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
 ## Development server
