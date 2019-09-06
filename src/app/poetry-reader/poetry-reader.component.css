@@ -1,0 +1,43 @@
+.reader-poem{
+  height: 250px;
+
+  font-family: 'EB Garamond', serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 36px;
+
+  color: #222;
+
+  padding: 10%;
+}
+
+.reader-button {
+  color: #af1d1d;
+  text-decoration: underline;
+  font-family: 'EB Garamond', serif;
+  cursor:pointer;
+  margin-top:2%;
+
+  border: none;
+
+  background-color: transparent;
+
+  font-size: 15px;
+}
+
+.reader-dropdown {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  margin-bottom: 5px;
+
+  font-family: 'EB Garamond', serif!important;
+
+}
+
+.reader-label {
+  color: #333;
+  font-size: 15px;
+}

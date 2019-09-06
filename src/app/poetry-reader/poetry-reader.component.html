@@ -1,0 +1,31 @@
+<div *ngIf="poem" class="reader-poem">
+  <div class="row">
+    <h2>{{poem.title}}</h2>
+
+    <div *ngFor="let line of poem.lines">
+      <span>{{line.text}}</span>
+    </div>
+  </div>
+</div>
+
+<span class="reader-label">author: </span>
+
+<select (change)="selectAuthor($event)" class="reader-dropdown">
+  <option value="default">default</option>
+  <option value="tumblrPoet">tumblr poet</option>
+  <option value="rupiKaur">rupi kaur</option>
+</select>
+
+<br/>
+
+<span class="reader-label">mood: </span>
+
+<select (change)="selectMood($event)" class="reader-dropdown">
+  <option value="basic">basic</option>
+  <option value="love">romantic</option>
+  <option value="angst">angsty</option>
+</select>
+
+<br/>
+
+<button (click)="getFullPoem()" class="reader-button">another</button>
