@@ -9,6 +9,6 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   public getPoem(author, mood) {
-    return this.httpClient.get(`http://api.qualitypoetry.com/create?author=`+author+`&mood=`+mood);
+    return this.httpClient.get(`http://api.qualitypoetry.com/create/poem?author=`+author+`&mood=`+mood);
   }
 }
