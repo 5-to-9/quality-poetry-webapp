@@ -8,9 +8,10 @@ import { ApiService } from '../api.service';
 })
 export class PoetryReaderComponent implements OnInit {
   poem
+  error
 
-  selectedMood: string;
-  selectedAuthor: string;
+  selectedMood: string
+  selectedAuthor: string
 
   authors: any = ['default', 'tumblrPoet', 'rupiKaur']
   moods: any = ['basic', 'love', 'angst']
@@ -26,7 +27,11 @@ export class PoetryReaderComponent implements OnInit {
 
   getFullPoem() {
     this.apiService.getPoem(this.selectedAuthor, this.selectedMood).subscribe((data)=>{
-      this.poem = data['poem']
+      if (data['poem']) {
+        this.poem = data['poem']
+      } else if (data['error']) {
+        this.error = data['error']
+      }
     });
   }
 
