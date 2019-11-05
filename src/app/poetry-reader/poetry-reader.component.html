@@ -3,7 +3,7 @@
     <h2>{{poem.title}}</h2>
 
     <div *ngFor="let line of poem.lines">
-      <span *ngIf="line.style==='italic';else second" style="font-style: italic;">
+      <span *ngIf="line.style==='italic';else second" class="poem-line-italic">
         {{line.text}}
       </span>
 
@@ -14,7 +14,13 @@
       </ng-template>
 
       <ng-template #third>
-        <span #third>
+        <span *ngIf="line.style==='quotation';else fourth">
+          "{{line.text}}"
+        </span>
+      </ng-template>
+
+      <ng-template #fourth>
+        <span>
           {{line.text}}
         </span>
       </ng-template>
