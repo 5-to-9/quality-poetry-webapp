@@ -13,6 +13,10 @@
   padding: 10%;
 }
 
+.poem-line-italic {
+  font-style: italic;
+}
+
 .reader-button {
   color: #af1d1d;
   text-decoration: underline;

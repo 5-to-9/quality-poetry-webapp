@@ -3,8 +3,35 @@
     <h2>{{poem.title}}</h2>
 
     <div *ngFor="let line of poem.lines">
-      <span>{{line.text}}</span>
+      <span *ngIf="line.style==='italic';else second" class="poem-line-italic">
+        {{line.text}}
+      </span>
+
+      <ng-template #second>
+        <span *ngIf="line.style==='parentheses';else third">
+          ({{line.text}})
+        </span>
+      </ng-template>
+
+      <ng-template #third>
+        <span *ngIf="line.style==='quotation';else fourth">
+          "{{line.text}}"
+        </span>
+      </ng-template>
+
+      <ng-template #fourth>
+        <span>
+          {{line.text}}
+        </span>
+      </ng-template>
     </div>
+  </div>
+</div>
+
+<div *ngIf="error" class="reader-poem">
+  <div class="row">
+    <h2>Error</h2>
+    <span>{{error}}</span>
   </div>
 </div>
 
