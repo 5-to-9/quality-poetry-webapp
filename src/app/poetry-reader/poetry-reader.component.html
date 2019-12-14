@@ -1,6 +1,10 @@
+<div class="row">
+  <img src="../assets/logoText.png" alt="Quality Poetry Text" class="qp-title"/>
+</div>
+
 <div *ngIf="poem" class="reader-poem">
   <div class="row">
-    <h2>{{poem.title}}</h2>
+    <h2 class="poem-title">{{poem.title}}</h2>
 
     <div *ngFor="let line of poem.lines">
       <span *ngIf="line.style==='italic';else second" class="poem-line-italic">
@@ -56,3 +60,9 @@
 <br/>
 
 <button (click)="getFullPoem()" class="reader-button">another</button>
+
+<br/>
+
+<a href="https://twitter.com/qualitypoetry" rel="noopener noreferrer" target="_blank">
+  <img src="../assets/logoBlack.png" alt="Quality Poetry Logo" class="qp-logo"/>
+</a>
