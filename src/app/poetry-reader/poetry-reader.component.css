@@ -1,4 +1,19 @@
-.reader-poem{
+img.qp-title {
+  max-width: 30%;
+  padding-top: 10%;
+}
+
+img.qp-logo {
+  max-width: 5%;
+  /* padding-top: 2%; */
+  padding-bottom: 3%;
+}
+
+.poem-title {
+  text-decoration: underline;
+}
+
+.reader-poem {
   height: 250px;
 
   font-family: 'EB Garamond', serif;
@@ -10,7 +25,7 @@
 
   color: #222;
 
-  padding: 10%;
+  /* padding-bottom: 3%; */
 }
 
 .poem-line-italic {
