@@ -5,7 +5,8 @@ img.qp-title {
 
 img.qp-logo {
   max-width: 5%;
-  padding-top: 2%;
+  /* padding-top: 2%; */
+  padding-bottom: 3%;
 }
 
 .poem-title {
@@ -24,7 +25,7 @@ img.qp-logo {
 
   color: #222;
 
-  padding-bottom: 3%;
+  /* padding-bottom: 3%; */
 }
 
 .poem-line-italic {
