@@ -1,3 +1,9 @@
+h1 {
+  padding-top: 10%;
+  margin: 0;
+  font-size: 4rem;
+}
+
 img.qp-title {
   max-width: 30%;
   padding-top: 10%;
@@ -59,4 +65,13 @@ img.qp-logo {
 .reader-label {
   color: #333;
   font-size: 15px;
+}
+
+.author-text,
+.author-text a,
+.author-text a:hover,
+.author-text a:focus,
+.author-text a:visited {
+  color: #555;
+  font-style: italic;
 }

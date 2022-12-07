@@ -1,5 +1,5 @@
 <div class="row">
-  <img src="../assets/logoText.png" alt="Quality Poetry Text" class="qp-title"/>
+  <h1>Quality Poetry</h1>
 </div>
 
 <div *ngIf="poem" class="reader-poem">
@@ -7,27 +7,9 @@
     <h2 class="poem-title">{{poem.title}}</h2>
 
     <div *ngFor="let line of poem.lines">
-      <span *ngIf="line.style==='italic';else second" class="poem-line-italic">
-        {{line.text}}
+      <span>
+        {{line}}
       </span>
-
-      <ng-template #second>
-        <span *ngIf="line.style==='parentheses';else third">
-          ({{line.text}})
-        </span>
-      </ng-template>
-
-      <ng-template #third>
-        <span *ngIf="line.style==='quotation';else fourth">
-          "{{line.text}}"
-        </span>
-      </ng-template>
-
-      <ng-template #fourth>
-        <span>
-          {{line.text}}
-        </span>
-      </ng-template>
     </div>
   </div>
 </div>
@@ -39,30 +21,14 @@
   </div>
 </div>
 
+<br/>
+<br/>
+
 <a href="https://twitter.com/qualitypoetry" rel="noopener noreferrer" target="_blank">
   <img src="../assets/logoBrown.png" alt="Quality Poetry Logo" class="qp-logo"/>
 </a>
 
 <br/>
-
-<span class="reader-label">author: </span>
-
-<select (change)="selectAuthor($event)" class="reader-dropdown">
-  <option value="default">default</option>
-  <option value="tumblrPoet">tumblr poet</option>
-  <option value="rupiKaur">rupi kaur</option>
-</select>
-
+<span class="author-text">by <a href="https://www.danielmaxsiegel.com" rel="noopener noreferrer" target="_blank">dms</a></span>
 <br/>
-
-<span class="reader-label">mood: </span>
-
-<select (change)="selectMood($event)" class="reader-dropdown">
-  <option value="basic">basic</option>
-  <option value="love">romantic</option>
-  <option value="angst">angsty</option>
-</select>
-
-<br/>
-
 <button (click)="getFullPoem()" class="reader-button">another</button>
